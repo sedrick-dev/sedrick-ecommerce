@@ -48,26 +48,31 @@
 
         <h2>Shop By Category</h2>
 
-        <p class="section-description">
-            Explore different product categories.
-        </p>
-
+        <button onclick="showAllProducts()">
+    Show All Products
+</button>
         <div class="category-container">
 
-            <div class="category-card">
-                <h3>Electronics</h3>
-                <p>Electronic products and devices</p>
-            </div>
+        <div class="category-card">
+    <h3 onclick="filterCategory('electronics')" style="cursor:pointer;">
+        Electronics
+    </h3>
+    <p>Electronic products and devices</p>
+</div>
 
-            <div class="category-card">
-                <h3>Fashion</h3>
-                <p>Clothes and fashion accessories</p>
-            </div>
+<div class="category-card">
+    <h3 onclick="filterCategory('fashion')" style="cursor:pointer;">
+        Fashion
+    </h3>
+    <p>Clothes and fashion accessories</p>
+</div>
 
-            <div class="category-card">
-                <h3>Home Products</h3>
-                <p>Products for your home</p>
-            </div>
+<div class="category-card">
+    <h3 onclick="filterCategory('home')" style="cursor:pointer;">
+        Home Products
+    </h3>
+    <p>Products for your home</p>
+</div>
 
         </div>
     </section>
@@ -80,6 +85,9 @@
         <p class="section-description">
             Discover products available in our store.
         </p>
+<button onclick="showAllProducts()">
+    Show All Products
+</button>
 
         <div class="products-container" id="product-list">
 
@@ -89,14 +97,12 @@
                 <p class="price">25,000 RWF</p>
                 <button onclick="addToCart('Wireless Headphones', 25000)">Add to Cart</button>
             </div>
-
-            <div class="product-card" data-category="fashion">
-                <img src="images/sneakers.jpg" alt="Classic Sneakers">
-                <h3>Classic Sneakers</h3>
-                <p class="price">35,000 RWF</p>
-                <button onclick="addToCart('Classic Sneakers', 35000)">Add to Cart</button>
-            </div>
-
+<div class="product-card" data-category="fashion">
+    <img src="images/sneakers.jpg" alt="Classic Sneakers">
+    <h3>Classic Sneakers</h3>
+    <p class="price">35,000 RWF</p>
+    <button onclick="addToCart('Classic Sneakers', 35000)">Add to Cart</button>
+</div>
             <div class="product-card" data-category="home">
                 <img src="images/lamp.jpg" alt="Modern Table Lamp">
                 <h3>Modern Table Lamp</h3>
@@ -121,18 +127,22 @@
 
     </section>
 
-    <!-- CONTACT -->
-    <section class="section contact-section" id="contact">
 
-        <h2>Contact Us</h2>
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
 
-        <p>Welcome to Sedrick E-Commerce customer support.</p>
+    <h2>Contact Us</h2>
 
-        <p>Email: contact@sedrickstore.com</p>
+    <p>Welcome to Sedrick E-Commerce customer support.</p>
 
-    </section>
+    <p>Email: contact@sedrickstore.com</p>
 
-    <!-- FOOTER -->
+    <p>Phone: +250 791 545 614</p>
+
+</section>  
+
+
+  <!-- FOOTER -->
     <footer>
         <h3>SEDRICK E-COMMERCE</h3>
 

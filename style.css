@@ -348,3 +348,21 @@ footer {
         padding: 40px 5%;
     }
 }
+body {
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    margin-right: 15px;
+}
+
+div {
+    border-radius: 10px;
+}

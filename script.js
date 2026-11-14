@@ -44,7 +44,32 @@ function checkoutWhatsApp() {
   message += `\nTotal: ${total.toLocaleString()} RWF`;
 
   // Replace 250780000000 with your actual WhatsApp phone number
-  const phone = "250780000000"; 
-  const url = `https://wa.me{phone}?text=${encodeURIComponent(message)}`;
+ const phone = "250791545614";
+const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
+}
+function filterCategory(category) {
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        if (product.dataset.category === category) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+function showAllProducts() {
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        product.style.display = "block";
+    });
+}
+function showAllProducts() {
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        product.style.display = "block";
+    });
 }
