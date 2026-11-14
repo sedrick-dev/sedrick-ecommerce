@@ -1,1 +1,1 @@
-console.log("Admin page loaded");
+alert("Admin page connected");
