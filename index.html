@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedrick E-Commerce</title>
+    <title>U.S.M</title>
+    <meta name="description" content="U.S.M online shopping website for electronics, fashion, home products and more">
+    <meta name="keywords" content="U.S.M, shopping, marketplace, electronics, fashion, Rwanda">
+    <meta name="author" content="U.S.M">
+    <meta name="description" content="U.S.M online shopping website for electronics, fashion, home products, and more.">
+    <meta name="keywords" content="U.S.M, online shopping, electronics, fashion, Rwanda, marketplace">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,15 +16,19 @@
 
     <!-- HEADER -->
     <header class="header">
-        <div class="logo">SEDRICK<span> STORE</span></div>
+    <div class="logo">U.S.M</div>
+    <p class="slogan">Shop Smart, Live Better</p>
 
 
-  <input type="text" id="searchInput" placeholder="Search products...">
-<button onclick="searchProducts()">Search</button>
+   <input type="text" id="searchInput" placeholder="Search products...">
+   <button onclick="searchProducts()">Search</button>
      
 
+   <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+   <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>            
+            
 
- <nav>
+
             <a href="#home">Home</a>
             <a href="#shop">Shop</a>
             <a href="#categories">Categories</a>
@@ -46,6 +55,8 @@
             <a href="seller-register.html">Become Seller</a>
             <a href="recommended.html">Recommended</a>
             <a href="top-selling.html">Top Selling</a>
+            <a href="seller-store.html">Stores</a>
+            <a href="invoice.html">Invoice</a>
 </nav>
 
        
@@ -54,18 +65,40 @@
  <a href="javascript:void(0)" class="cart-link" onclick="toggleCart()">My Shopping</a>
     </header>
 
-    <!-- HOME SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="small-title">WELCOME TO OUR ONLINE STORE</p>
+           <!-- HOME SECTION -->
+           <section class="hero" id="home">
+           <section class="hero" id="home">
 
-            <h1>Discover Products<br>
-                You Will Love</h1>
+           <div class="slider">
 
-            <p>
-                Shop online easily and discover quality
-                products at affordable prices.
-            </p>
+           <div class="slide active">
+            🔥 Big Discounts Available
+           </div>
+
+           <div class="slide">
+            📱 New Electronics Arrived
+           </div>
+
+           <div class="slide">
+            👕 Fashion Sale This Week
+           </div>
+
+    </div>
+
+    <div class="hero-content">
+           <div class="hero-content">
+           <p class="small-title">WELCOME TO U.S.M</p>
+
+          <h1>Welcome to U.S.M</h1>
+
+          <p class="usm-tagline">
+          Your Trusted Online Shopping Destination
+</p>
+
+ <p>
+          Buy electronics, fashion, home products,
+          and more from U.S.M at the best prices.
+</p>
 
             <a href="#shop" class="main-button">
                 Start Shopping
@@ -213,12 +246,28 @@
 </section>
 
   <!-- FOOTER -->
+
+
+<section class="newsletter">
+
+    <h2>Subscribe to U.S.M</h2>
+
+    <p>Get offers, new arrivals, and discounts.</p>
+
+    <input type="email" id="newsletterEmail" placeholder="Enter your email">
+
+    <button onclick="subscribeNewsletter()">Subscribe</button>
+
+</section>
+
+
+
     <footer>
-        <h3>SEDRICK E-COMMERCE</h3>
+      <h3>U.S.M</h3>
 
         <p>Your Online Shopping Store</p>
 
-        <p>© 2026 Sedrick E-Commerce. All rights reserved.</p>
+        <p>© 2026 U.S.M. All rights reserved.</p>
     </footer>
 
     <!-- Shopping Cart Popup Modal -->
@@ -232,8 +281,20 @@
         </div>
     </div>
 
-    <!-- Link to your JavaScript file -->
-    <script src="script.js"></script>
+            <!-- Link to your JavaScript file -->
+            <script src="script.js"></script>
 
+
+<div class="bottom-nav">
+
+    <a href="index.html">🏠 Home</a>
+
+    <a href="wishlist.html">❤️ Wishlist</a>
+
+    <a href="orders.html">📦 Orders</a>
+
+    <a href="profile.html">👤 Profile</a>
+
+</div>
 </body>
 </html>

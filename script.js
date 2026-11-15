@@ -99,3 +99,35 @@ function viewProduct(productName) {
     document.getElementById("recentlyViewed").innerHTML =
         "Last viewed: " + productName;
 }
+function toggleMenu() {
+    let menu = document.getElementById("mobileMenu");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+
+    slides[currentSlide].style.display = "none";
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].style.display = "block";
+
+}, 3000);
+function subscribeNewsletter() {
+    let email = document.getElementById("newsletterEmail").value;
+
+    if (email === "") {
+        alert("Enter your email");
+        return;
+    }
+
+    alert("Thank you for subscribing!");
+}
