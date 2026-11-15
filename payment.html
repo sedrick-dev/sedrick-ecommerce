@@ -1,18 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Payment</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-<h1>Payment Methods</h1>
+<div class="payment-container">
 
-<button>MTN Mobile Money</button><br><br>
+    <h1>Payment Methods</h1>
+    <p class="payment-subtitle">Choose your preferred payment method</p>
 
-<button>Airtel Money</button><br><br>
+    <div class="payment-options">
 
-<button>Credit Card</button>
+        <div class="payment-card mtn" onclick="selectPayment('MTN Mobile Money', this)">
+            <div class="payment-logo">MTN</div>
+            <h3>MTN Mobile Money</h3>
+            <p>Pay securely using MTN MoMo</p>
+            <span class="payment-check">Select Payment →</span>
+        </div>
 
-</body>
-</html>
+        <div class="payment-card airtel" onclick="selectPayment('Airtel Money', this)">
+            <div class="payment-logo">airtel</div>
+            <h3>Airtel Money</h3>
+            <p>Pay easily using Airtel Money</p>
+            <span class="payment-check">Select Payment →</span>
+        </div>
+
+        <div class="payment-card credit" onclick="selectPayment('Credit Card', this)">
+            <div class="payment-logo">💳</div>
+            <h3>Credit Card</h3>
+            <p>Pay using your bank card</p>
+            <span class="payment-check">Select Payment →</span>
+        </div>
+
+    </div>
+
+    <button class="continue-payment" onclick="continuePayment()">
+        Continue to Payment
+    </button>
+
+    <p id="payment-message"></p>
+
+    <a href="index.html" class="payment-back">← Back Home</a>
+
+</div>
+
+<script>
+let selectedPayment = "";
+
+function selectPayment(method, card) {
+    selectedPayment = method;
+
+    document.querySelectorAll(".payment-card").forEach(item => {
+        item.classList.remove("selected");
+    });
+
+    card.classList.add("selected");
+
+    document.getElementById("payment-message").textContent =
+        method + " selected successfully.";
+}
+
+function continuePayment() {
+    if (selectedPayment === "") {
+        alert("Please select a payment method first.");
+        return;
+    }
+
+    alert("You selected: " + selectedPayment +
+          "\nPayment gateway integration is not yet connected.");
+}
+</script>
