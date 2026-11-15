@@ -184,3 +184,64 @@ footer h3 { color: white; font-size: 20px; }
 @media (max-width: 360px) {
     .products-container { grid-template-columns: 1fr; }
 }
+
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.profile-card {
+    background: #151d30;
+    padding: 35px;
+    width: 350px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+#profilePhoto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4f8cff;
+    cursor: pointer;
+}
+
+#photoInput {
+    display: none;
+}
+
+.change-photo {
+    display: block;
+    color: #4f8cff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.profile-details {
+    margin: 20px 0;
+    line-height: 2;
+}
+
+.profile-card button {
+    background: #4f8cff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.profile-card a {
+    display: block;
+    color: #4f8cff;
+    text-decoration: none;
+}
+
