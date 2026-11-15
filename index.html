@@ -3,298 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U.S.M</title>
-    <meta name="description" content="U.S.M online shopping website for electronics, fashion, home products and more">
-    <meta name="keywords" content="U.S.M, shopping, marketplace, electronics, fashion, Rwanda">
-    <meta name="author" content="U.S.M">
-    <meta name="description" content="U.S.M online shopping website for electronics, fashion, home products, and more.">
-    <meta name="keywords" content="U.S.M, online shopping, electronics, fashion, Rwanda, marketplace">
+    <title>U.S.M | Online Shopping</title>
+    <meta name="description" content="U.S.M online shopping website for electronics, fashion, home products and more.">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="app-shell">
+        <!-- Collapsible navigation -->
+        <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+            <div class="sidebar-brand">
+                <span class="brand-mark">U</span>
+                <span class="brand-name">U.S.M</span>
+            </div>
 
-    <!-- HEADER -->
-    <header class="header">
-    <div class="logo">U.S.M</div>
-    <p class="slogan">Shop Smart, Live Better</p>
+            <p class="sidebar-label">MENU</p>
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-link active" title="Home"><span class="nav-icon">⌂</span><span class="nav-text">Home</span></a>
+                <a href="#shop" class="nav-link" title="Shop"><span class="nav-icon">▦</span><span class="nav-text">Shop</span></a>
+                <a href="#categories" class="nav-link" title="Categories"><span class="nav-icon">▤</span><span class="nav-text">Categories</span></a>
+                <a href="profile.html" class="nav-link" title="Profile"><span class="nav-icon">♙</span><span class="nav-text">Profile</span></a>
+                <a href="orders.html" class="nav-link" title="Orders"><span class="nav-icon">▣</span><span class="nav-text">Orders</span></a>
+                <a href="notifications.html" class="nav-link" title="Notifications"><span class="nav-icon">♢</span><span class="nav-text">Notifications</span></a>
+                <a href="wishlist.html" class="nav-link" title="Wishlist"><span class="nav-icon">♡</span><span class="nav-text">Wishlist</span></a>
+                <a href="payment.html" class="nav-link" title="Payment"><span class="nav-icon">▤</span><span class="nav-text">Payment</span></a>
+                <a href="dashboard.html" class="nav-link" title="Dashboard"><span class="nav-icon">▥</span><span class="nav-text">Dashboard</span></a>
+                <a href="tracking.html" class="nav-link" title="Tracking"><span class="nav-icon">⌖</span><span class="nav-text">Tracking</span></a>
+            </nav>
 
+            <p class="sidebar-label secondary-label">MORE</p>
+            <nav class="sidebar-nav">
+                <a href="seller.html" class="nav-link" title="Seller"><span class="nav-icon">♧</span><span class="nav-text">Seller</span></a>
+                <a href="coupons.html" class="nav-link" title="Coupons"><span class="nav-icon">％</span><span class="nav-text">Coupons</span></a>
+                <a href="recommended.html" class="nav-link" title="Recommended"><span class="nav-icon">✦</span><span class="nav-text">Recommended</span></a>
+                <a href="top-selling.html" class="nav-link" title="Top Selling"><span class="nav-icon">↗</span><span class="nav-text">Top Selling</span></a>
+                <a href="seller-store.html" class="nav-link" title="Stores"><span class="nav-icon">▣</span><span class="nav-text">Stores</span></a>
+                <a href="invoice.html" class="nav-link" title="Invoice"><span class="nav-icon">▧</span><span class="nav-text">Invoice</span></a>
+                <a href="reviews.html" class="nav-link" title="Reviews"><span class="nav-icon">☆</span><span class="nav-text">Reviews</span></a>
+                <a href="chat.html" class="nav-link" title="Chat"><span class="nav-icon">☏</span><span class="nav-text">Chat</span></a>
+                <a href="faq.html" class="nav-link" title="FAQ"><span class="nav-icon">?</span><span class="nav-text">FAQ</span></a>
+                <a href="help.html" class="nav-link" title="Help"><span class="nav-icon">ⓘ</span><span class="nav-text">Help</span></a>
+                <a href="settings.html" class="nav-link" title="Settings"><span class="nav-icon">⚙</span><span class="nav-text">Settings</span></a>
+                <a href="signup.html" class="nav-link" title="Sign Up"><span class="nav-icon">＋</span><span class="nav-text">Sign Up</span></a>
+                <a href="login.html" class="nav-link" title="Login"><span class="nav-icon">⇥</span><span class="nav-text">Login</span></a>
+                <a href="checkout.html" class="nav-link" title="Checkout"><span class="nav-icon">✓</span><span class="nav-text">Checkout</span></a>
+                <a href="seller-register.html" class="nav-link" title="Become Seller"><span class="nav-icon">♙</span><span class="nav-text">Become Seller</span></a>
+                <a href="#about" class="nav-link" title="About"><span class="nav-icon">ⓘ</span><span class="nav-text">About</span></a>
+                <a href="#contact" class="nav-link" title="Contact"><span class="nav-icon">✉</span><span class="nav-text">Contact</span></a>
+            </nav>
+            <div class="sidebar-footer"><span class="nav-icon">●</span><span class="nav-text">Shop Smart, Live Better</span></div>
+        </aside>
 
-   <input type="text" id="searchInput" placeholder="Search products...">
-   <button onclick="searchProducts()">Search</button>
-     
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMenu()"></div>
 
-   <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
-   <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>            
-            
-
-
-            <a href="#home">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#categories">Categories</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="profile.html">Profile</a>
-            <a href="orders.html">Orders</a>
-            <a href="notifications.html">🔔 Notifications</a>
-            <a href="seller.html">Seller</a>
-            <a href="coupons.html">Coupons</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Login</a>
-            <a href="checkout.html">Checkout</a>
-            <a href="tracking.html">Tracking</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="help.html">Help</a>
-            <a href="faq.html">FAQ</a>
-            <a href="chat.html">Chat</a>
-            <a href="settings.html">Settings</a>
-            <a href="wishlist.html">Wishlist</a>
-            <a href="payment.html">Payment</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="track-package.html">Track Package</a>
-            <a href="seller-register.html">Become Seller</a>
-            <a href="recommended.html">Recommended</a>
-            <a href="top-selling.html">Top Selling</a>
-            <a href="seller-store.html">Stores</a>
-            <a href="invoice.html">Invoice</a>
-</nav>
-
-       
-
-
- <a href="javascript:void(0)" class="cart-link" onclick="toggleCart()">My Shopping</a>
-    </header>
-
-           <!-- HOME SECTION -->
-           <section class="hero" id="home">
-           <section class="hero" id="home">
-
-           <div class="slider">
-
-           <div class="slide active">
-            🔥 Big Discounts Available
-           </div>
-
-           <div class="slide">
-            📱 New Electronics Arrived
-           </div>
-
-           <div class="slide">
-            👕 Fashion Sale This Week
-           </div>
-
-    </div>
-
-    <div class="hero-content">
-           <div class="hero-content">
-           <p class="small-title">WELCOME TO U.S.M</p>
-
-          <h1>Welcome to U.S.M</h1>
-
-          <p class="usm-tagline">
-          Your Trusted Online Shopping Destination
-</p>
-
- <p>
-          Buy electronics, fashion, home products,
-          and more from U.S.M at the best prices.
-</p>
-
-            <a href="#shop" class="main-button">
-                Start Shopping
-            </a>
-        </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    <section class="section" id="categories">
-
-        <h2>Shop By Category</h2>
-
-        <button onclick="showAllProducts()">
-    Show All Products
-</button>
-        <div class="category-container">
-
-        <div class="category-card">
-    <h3 onclick="filterCategory('electronics')" style="cursor:pointer;">
-        Electronics
-    </h3>
-    <p>Electronic products and devices</p>
-</div>
-
-<div class="category-card">
-    <h3 onclick="filterCategory('fashion')" style="cursor:pointer;">
-        Fashion
-    </h3>
-    <p>Clothes and fashion accessories</p>
-</div>
-
-<div class="category-card">
-    <h3 onclick="filterCategory('home')" style="cursor:pointer;">
-        Home Products
-    </h3>
-    <p>Products for your home</p>
-</div>
-
-        </div>
-    </section>
-
-
-<section class="section flash-sale">
-
-    <h2>🔥 Flash Sale</h2>
-
-    <div class="flash-sale-box">
-        <h3>Wireless Headphones</h3>
-        <p><del>30,000 RWF</del></p>
-        <p>25,000 RWF</p>
-    </div>
-
-</section>
-
-    
-<!-- PRODUCTS -->
-    <section class="section products-section" id="shop">
-
-        <h2>Our Products</h2>
-
-        <p class="section-description">
-            Discover products available in our store.
-        </p>
-<button onclick="showAllProducts()">
-    Show All Products
-</button>
-
-        <div class="products-container" id="product-list">
-
-            <div class="product-card" data-category="electronics">
-                <img src="images/headphones.jpg" alt="Wireless Headphones">
-               <h3 onclick="viewProduct('Wireless Headphones')" style="cursor:pointer;">
-                Wireless Headphones
-               </h3>
-               <h3>
-               <a href="product.html">
-               Wireless Headphones
-               </a>
-               </h3>
-                <p class="price">25,000 RWF</p>
-                <div class="rating">
-                 ⭐⭐⭐⭐⭐
+        <main class="main-area">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-btn" id="menuBtn" type="button" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                    <div>
+                        <div class="topbar-title">U.S.M Shopping</div>
+                        <div class="topbar-subtitle">Shop Smart, Live Better</div>
+                    </div>
                 </div>
-                <button onclick="addToCart('Wireless Headphones', 25000)">Add to Cart</button>
-                <button onclick="addToWishlist('Wireless Headphones')">❤️</button>
-            
+                <div class="topbar-actions">
+                    <div class="search-box">
+                        <span aria-hidden="true">⌕</span>
+                        <input type="search" id="searchInput" placeholder="Search products..." onkeydown="if(event.key === 'Enter') searchProducts()">
+                        <button type="button" onclick="searchProducts()">Search</button>
+                    </div>
+                    <button class="cart-link" type="button" onclick="toggleCart()">🛒 <span>My Shopping</span> <b id="cart-count">0</b></button>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <section class="hero" id="home">
+                    <div class="hero-copy">
+                        <p class="eyebrow">WELCOME TO U.S.M</p>
+                        <h1>Your Trusted Online Shopping Destination</h1>
+                        <p>Buy electronics, fashion, home products, and more from U.S.M at the best prices.</p>
+                        <a href="#shop" class="main-button">Start Shopping <span>→</span></a>
+                    </div>
+                    <div class="hero-promo">
+                        <div class="slider" aria-live="polite">
+                            <div class="slide active">🔥 Big Discounts Available</div>
+                            <div class="slide">📱 New Electronics Arrived</div>
+                            <div class="slide">👕 Fashion Sale This Week</div>
+                        </div>
+                        <div class="promo-orbit">U.S.M</div>
+                        <p>Discover something<br><strong>you will love.</strong></p>
+                    </div>
+                </section>
+
+                <section class="section categories-section" id="categories">
+                    <div class="section-heading">
+                        <div><p class="eyebrow">BROWSE COLLECTIONS</p><h2>Shop By Category</h2></div>
+                        <button class="text-button" type="button" onclick="showAllProducts()">Show all products →</button>
+                    </div>
+                    <div class="category-container">
+                        <button class="category-card" type="button" onclick="filterCategory('electronics')"><span class="category-icon">⌁</span><h3>Electronics</h3><p>Electronic products and devices</p></button>
+                        <button class="category-card" type="button" onclick="filterCategory('fashion')"><span class="category-icon">♧</span><h3>Fashion</h3><p>Clothes and fashion accessories</p></button>
+                        <button class="category-card" type="button" onclick="filterCategory('home')"><span class="category-icon">⌂</span><h3>Home Products</h3><p>Products for your home</p></button>
+                    </div>
+                </section>
+
+                <section class="flash-sale">
+                    <div><p class="eyebrow">LIMITED-TIME OFFER</p><h2>🔥 Flash Sale</h2><p>Special prices on selected products.</p></div>
+                    <div class="flash-sale-box"><span class="sale-tag">SPECIAL OFFER</span><h3>Wireless Headphones</h3><p class="old-price"><del>30,000 RWF</del></p><p class="sale-price">25,000 RWF</p></div>
+                </section>
+
+                <section class="section products-section" id="shop">
+                    <div class="section-heading">
+                        <div><p class="eyebrow">HANDPICKED FOR YOU</p><h2>Our Products</h2><p class="section-description">Discover products available in our store.</p></div>
+                        <button class="text-button" type="button" onclick="showAllProducts()">View all products →</button>
+                    </div>
+                    <div class="products-container" id="product-list">
+                        <article class="product-card" data-category="electronics">
+                            <div class="product-image-wrap"><img src="images/headphones.jpg" alt="Wireless Headphones" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="image-fallback">🎧</span><span class="product-badge">Popular</span></div>
+                            <div class="product-info"><p class="product-category">ELECTRONICS</p><h3 onclick="viewProduct('Wireless Headphones')">Wireless Headphones</h3><div class="rating">★★★★★ <span>(5.0)</span></div><div class="product-bottom"><p class="price">25,000 RWF</p><button onclick="addToCart('Wireless Headphones', 25000)">Add to Cart</button></div><button class="wishlist-button" onclick="addToWishlist('Wireless Headphones')" aria-label="Add Wireless Headphones to wishlist">♡</button></div>
+                        </article>
+                        <article class="product-card" data-category="fashion">
+                            <div class="product-image-wrap"><img src="images/sneakers.jpg" alt="Classic Sneakers" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="image-fallback">👟</span></div>
+                            <div class="product-info"><p class="product-category">FASHION</p><h3 onclick="viewProduct('Classic Sneakers')">Classic Sneakers</h3><div class="rating">★★★★★ <span>(5.0)</span></div><div class="product-bottom"><p class="price">35,000 RWF</p><button onclick="addToCart('Classic Sneakers', 35000)">Add to Cart</button></div><button class="wishlist-button" onclick="addToWishlist('Classic Sneakers')" aria-label="Add Classic Sneakers to wishlist">♡</button></div>
+                        </article>
+                        <article class="product-card" data-category="home">
+                            <div class="product-image-wrap"><img src="images/lamp.jpg" alt="Modern Table Lamp" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><span class="image-fallback">💡</span></div>
+                            <div class="product-info"><p class="product-category">HOME PRODUCTS</p><h3 onclick="viewProduct('Modern Table Lamp')">Modern Table Lamp</h3><div class="rating">★★★★★ <span>(5.0)</span></div><div class="product-bottom"><p class="price">18,000 RWF</p><button onclick="addToCart('Modern Table Lamp', 18000)">Add to Cart</button></div><button class="wishlist-button" onclick="addToWishlist('Modern Table Lamp')" aria-label="Add Modern Table Lamp to wishlist">♡</button></div>
+                        </article>
+                    </div>
+                    <p class="product-note">The product grid is set to 4 columns on wide screens. Add more product cards to fill each row.</p>
+                </section>
+
+                <section class="section about-contact-grid">
+                    <div class="info-panel" id="about"><p class="eyebrow">WHO WE ARE</p><h2>About U.S.M</h2><p>U.S.M is an online shopping platform designed to make shopping simple and convenient. Customers can discover products, place orders and enjoy online shopping.</p></div>
+                    <div class="info-panel" id="contact"><p class="eyebrow">WE ARE HERE TO HELP</p><h2>Contact Us</h2><p>Email: contact@sedrickstore.com</p><p>WhatsApp: +250 791 545 614</p></div>
+                </section>
+
+                <section class="section recently-viewed"><h2>Recently Viewed Products</h2><p id="recentlyViewed">No recently viewed products.</p></section>
+                <section class="newsletter"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>Subscribe to U.S.M</h2><p>Get offers, new arrivals, and discounts.</p></div><div class="newsletter-form"><input type="email" id="newsletterEmail" placeholder="Enter your email"><button onclick="subscribeNewsletter()">Subscribe</button></div></section>
+                <footer><h3>U.S.M</h3><p>Your Online Shopping Store</p><p>© 2026 U.S.M. All rights reserved.</p></footer>
             </div>
-
-
-<div class="product-card" data-category="fashion">
-    <img src="images/sneakers.jpg" alt="Classic Sneakers">
-    <h3>Classic Sneakers</h3>
-    <p class="price">35,000 RWF</p>
-    <button onclick="addToCart('Classic Sneakers', 35000)">Add to Cart</button>
-</div>
-            <div class="product-card" data-category="home">
-                <img src="images/lamp.jpg" alt="Modern Table Lamp">
-                <h3>Modern Table Lamp</h3>
-                <p class="price">18,000 RWF</p>
-                <button onclick="addToCart('Modern Table Lamp', 18000)">Add to Cart</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section about-section" id="about">
-
-        <h2>About Sedrick Store</h2>
-
-        <p>
-            Sedrick E-Commerce is an online shopping platform
-            designed to make shopping simple and convenient.
-            Customers will be able to discover products,
-            place orders and enjoy online shopping.
-        </p>
-
-    </section>
-
-
-
-
-<!-- CONTACT -->
-<section class="section contact-section" id="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>Welcome to Sedrick E-Commerce customer support.</p>
-
-    <p>Email: contact@sedrickstore.com</p>
-
-    <p>WhatsApp: +250 791 545 614</p>
-
-</section>
-
-
-<section class="section recently-viewed">
-
-    <h2>Recently Viewed Products</h2>
-
-    <div id="recentlyViewed">
-        No recently viewed products.
+        </main>
     </div>
 
-</section>
-
-  <!-- FOOTER -->
-
-
-<section class="newsletter">
-
-    <h2>Subscribe to U.S.M</h2>
-
-    <p>Get offers, new arrivals, and discounts.</p>
-
-    <input type="email" id="newsletterEmail" placeholder="Enter your email">
-
-    <button onclick="subscribeNewsletter()">Subscribe</button>
-
-</section>
-
-
-
-    <footer>
-      <h3>U.S.M</h3>
-
-        <p>Your Online Shopping Store</p>
-
-        <p>© 2026 U.S.M. All rights reserved.</p>
-    </footer>
-
-    <!-- Shopping Cart Popup Modal -->
-    <div id="cart-modal" class="modal">
+    <!-- Shopping cart modal -->
+    <div id="cart-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
         <div class="modal-content">
-            <span class="close-btn" onclick="toggleCart()">&times;</span>
-            <h2>My Shopping Cart</h2>
+            <button class="close-btn" type="button" onclick="toggleCart()" aria-label="Close cart">&times;</button>
+            <p class="eyebrow">YOUR BASKET</p><h2 id="cart-title">My Shopping Cart</h2>
             <ul id="cart-items"></ul>
-            <p><strong>Total: <span id="cart-total">0</span> RWF</strong></p>
+            <p class="cart-total"><strong>Total: <span id="cart-total">0</span> RWF</strong></p>
             <button class="checkout-btn" onclick="checkoutWhatsApp()">Order via WhatsApp</button>
         </div>
     </div>
 
-            <!-- Link to your JavaScript file -->
-            <script src="script.js"></script>
-
-
-<div class="bottom-nav">
-
-    <a href="index.html">🏠 Home</a>
-
-    <a href="wishlist.html">❤️ Wishlist</a>
-
-    <a href="orders.html">📦 Orders</a>
-
-    <a href="profile.html">👤 Profile</a>
-
-</div>
+    <script src="script.js"></script>
 </body>
 </html>

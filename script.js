@@ -1,133 +1,156 @@
+// U.S.M shopping website interactions
 let cart = [];
+let wishlist = [];
 
 function addToCart(name, price) {
-  cart.push({ name, price });
-  updateCartUI();
-  alert(name + " added to your cart!");
+    cart.push({ name, price });
+    updateCartUI();
+    alert(name + " added to your cart!");
 }
 
 function updateCartUI() {
-  const cartList = document.getElementById("cart-items");
-  const totalSpan = document.getElementById("cart-total");
-  cartList.innerHTML = "";
-  
-  let total = 0;
-  cart.forEach((item) => {
-    total += item.price;
-    const li = document.createElement("li");
-    li.textContent = `${item.name} - ${item.price.toLocaleString()} RWF`;
-    cartList.appendChild(li);
-  });
+    const cartList = document.getElementById("cart-items");
+    const totalSpan = document.getElementById("cart-total");
+    const countSpan = document.getElementById("cart-count");
+    if (!cartList || !totalSpan) return;
 
-  totalSpan.textContent = total.toLocaleString();
+    cartList.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item) => {
+        total += item.price;
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ${item.price.toLocaleString()} RWF`;
+        cartList.appendChild(li);
+    });
+
+    totalSpan.textContent = total.toLocaleString();
+    if (countSpan) countSpan.textContent = cart.length;
 }
 
 function toggleCart() {
-  const modal = document.getElementById("cart-modal");
-  modal.style.display = modal.style.display === "flex" ? "none" : "flex";
+    const modal = document.getElementById("cart-modal");
+    if (!modal) return;
+    modal.style.display = modal.style.display === "flex" ? "none" : "flex";
 }
 
 function checkoutWhatsApp() {
-  if (cart.length === 0) {
-    alert("Your cart is empty!");
-    return;
-  }
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
 
-  let message = "Hello Sedrick Store! I want to order:\n";
-  let total = 0;
+    let message = "Hello U.S.M! I want to order:\n";
+    let total = 0;
+    cart.forEach(item => {
+        message += `- ${item.name} (${item.price.toLocaleString()} RWF)\n`;
+        total += item.price;
+    });
+    message += `\nTotal: ${total.toLocaleString()} RWF`;
 
-  cart.forEach(item => {
-    message += `- ${item.name} (${item.price.toLocaleString()} RWF)\n`;
-    total += item.price;
-  });
-
-  message += `\nTotal: ${total.toLocaleString()} RWF`;
-
-  // Replace 250780000000 with your actual WhatsApp phone number
- const phone = "250791545614";
-const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
+    const phone = "250791545614";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
 }
+
 function filterCategory(category) {
-    const products = document.querySelectorAll(".product-card");
-
-    products.forEach(product => {
-        if (product.dataset.category === category) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
-        }
+    document.querySelectorAll(".product-card").forEach(product => {
+        product.style.display = product.dataset.category === category ? "" : "none";
     });
+    document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
 }
-function showAllProducts() {
-    const products = document.querySelectorAll(".product-card");
 
-    products.forEach(product => {
-        product.style.display = "block";
-    });
-}
 function showAllProducts() {
-    const products = document.querySelectorAll(".product-card");
-
-    products.forEach(product => {
-        product.style.display = "block";
+    document.querySelectorAll(".product-card").forEach(product => {
+        product.style.display = "";
     });
 }
 
 function searchProducts() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let products = document.querySelectorAll(".product-card");
+    const input = document.getElementById("searchInput");
+    if (!input) return;
+    const searchTerm = input.value.trim().toLowerCase();
 
-    products.forEach(product => {
-        let name = product.querySelector("h3").textContent.toLowerCase();
-
-        if (name.includes(input)) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
-        }
+    document.querySelectorAll(".product-card").forEach(product => {
+        const name = product.querySelector("h3")?.textContent.toLowerCase() || "";
+        product.style.display = name.includes(searchTerm) ? "" : "none";
     });
+    document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
 }
-
-let wishlist = [];
 
 function addToWishlist(productName) {
-    wishlist.push(productName);
-    alert(productName + " added to wishlist!");
-}
-function viewProduct(productName) {
-    document.getElementById("recentlyViewed").innerHTML =
-        "Last viewed: " + productName;
-}
-function toggleMenu() {
-    let menu = document.getElementById("mobileMenu");
-
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
+    if (!wishlist.includes(productName)) {
+        wishlist.push(productName);
+        alert(productName + " added to your wishlist!");
     } else {
-        menu.style.display = "block";
+        alert(productName + " is already in your wishlist.");
     }
 }
-let currentSlide = 0;
 
-const slides = document.querySelectorAll(".slide");
+function viewProduct(productName) {
+    const recentlyViewed = document.getElementById("recentlyViewed");
+    if (recentlyViewed) recentlyViewed.textContent = "Last viewed: " + productName;
+}
 
-setInterval(() => {
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const menuBtn = document.getElementById("menuBtn");
+    if (!sidebar) return;
 
-    slides[currentSlide].style.display = "none";
+    const isMobile = window.matchMedia("(max-width: 850px)").matches;
+    const expanded = sidebar.classList.toggle("expanded");
 
-    currentSlide = (currentSlide + 1) % slides.length;
+    if (isMobile) {
+        overlay?.classList.toggle("visible", expanded);
+    } else {
+        document.body.classList.toggle("sidebar-expanded", expanded);
+    }
+    if (menuBtn) menuBtn.setAttribute("aria-expanded", String(expanded));
+}
 
-    slides[currentSlide].style.display = "block";
+function closeMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const menuBtn = document.getElementById("menuBtn");
+    sidebar?.classList.remove("expanded");
+    overlay?.classList.remove("visible");
+    document.body.classList.remove("sidebar-expanded");
+    menuBtn?.setAttribute("aria-expanded", "false");
+}
 
-}, 3000);
 function subscribeNewsletter() {
-    let email = document.getElementById("newsletterEmail").value;
-
-    if (email === "") {
+    const emailInput = document.getElementById("newsletterEmail");
+    const email = emailInput?.value.trim() || "";
+    if (!email) {
         alert("Enter your email");
         return;
     }
-
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
     alert("Thank you for subscribing!");
+    emailInput.value = "";
 }
+
+// Simple rotating promotional messages
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    if (slides.length > 1) {
+        let currentSlide = 0;
+        window.setInterval(() => {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }, 3000);
+    }
+
+    // Close the mobile sidebar after a navigation link is selected.
+    document.querySelectorAll(".sidebar-nav a").forEach(link => {
+        link.addEventListener("click", () => {
+            if (window.matchMedia("(max-width: 850px)").matches) closeMenu();
+        });
+    });
+    updateCartUI();
+});
