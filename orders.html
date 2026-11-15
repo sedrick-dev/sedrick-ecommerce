@@ -1,26 +1,41 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Orders</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | U.S.M</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>My Orders</h1>
+<div class="orders-container">
 
-<div class="order-card">
-    <h3>Wireless Headphones</h3>
-    <p>Status: Delivered ✅</p>
-    <p>Price: 25,000 RWF</p>
+    <h1>My Orders</h1>
+    <p class="orders-subtitle">Manage and track your purchases</p>
+
+    <div class="order-card">
+        <h3>Wireless Headphones</h3>
+        <p>Status: <span class="delivered">Delivered ✓</span></p>
+        <p>Price: 25,000 RWF</p>
+        <button onclick="viewOrder('Wireless Headphones','Delivered','25,000 RWF')">
+            View Details
+        </button>
+    </div>
+
+    <div class="order-card">
+        <h3>Classic Sneakers</h3>
+        <p>Status: <span class="processing">Processing ⏳</span></p>
+        <p>Price: 35,000 RWF</p>
+        <button onclick="viewOrder('Classic Sneakers','Processing','35,000 RWF')">
+            View Details
+        </button>
+    </div>
+
+    <a href="index.html" class="back-home">← Back Home</a>
+
 </div>
 
-<div class="order-card">
-    <h3>Classic Sneakers</h3>
-    <p>Status: Processing ⏳</p>
-    <p>Price: 35,000 RWF</p>
-</div>
-
-<a href="index.html">Back Home</a>
-
+<script src="orders.js"></script>
 </body>
 </html>

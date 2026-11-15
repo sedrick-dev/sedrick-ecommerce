@@ -245,3 +245,51 @@ footer h3 { color: white; font-size: 20px; }
     text-decoration: none;
 }
 
+/* CENTER MY ORDERS */
+.orders-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.orders-subtitle {
+    color: #aab4c8;
+    margin-bottom: 25px;
+}
+
+.order-card {
+    background: #151d30;
+    width: 420px;
+    max-width: 90%;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.order-card button,
+.back-home {
+    background: #3978f6;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.delivered {
+    color: #35d07f;
+}
+
+.processing {
+    color: #ffc247;
+}
+
