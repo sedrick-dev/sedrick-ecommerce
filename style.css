@@ -293,3 +293,32 @@ footer h3 { color: white; font-size: 20px; }
     color: #ffc247;
 }
 
+/* CENTER WISHLIST PAGE */
+.wishlist-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.wishlist-container h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.wishlist-container p {
+    color: #aab4c8;
+    margin-bottom: 20px;
+}
+
+.wishlist-container .back-home {
+    background: #3978f6;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
