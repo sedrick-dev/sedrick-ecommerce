@@ -366,3 +366,57 @@ a {
 div {
     border-radius: 10px;
 }
+.rating{
+    color: gold;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.flash-sale {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.flash-sale-box {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.recently-viewed {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.order-card{
+    background:white;
+    border:1px solid #ddd;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+}
+.notification {
+    background: white;
+    border-left: 5px solid orange;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.seller-card{
+    background:white;
+    border:1px solid #ddd;
+    padding:20px;
+    margin:10px;
+    border-radius:10px;
+    text-align:center;
+}
+.coupon{
+    background:#fff3cd;
+    border:2px dashed orange;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+}

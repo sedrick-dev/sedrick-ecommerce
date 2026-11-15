@@ -25,7 +25,28 @@
             <a href="#categories">Categories</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-        </nav>
+            <a href="profile.html">Profile</a>
+            <a href="orders.html">Orders</a>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="seller.html">Seller</a>
+            <a href="coupons.html">Coupons</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="help.html">Help</a>
+            <a href="faq.html">FAQ</a>
+            <a href="chat.html">Chat</a>
+            <a href="settings.html">Settings</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="payment.html">Payment</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="track-package.html">Track Package</a>
+            <a href="seller-register.html">Become Seller</a>
+            <a href="recommended.html">Recommended</a>
+            <a href="top-selling.html">Top Selling</a>
+</nav>
 
        
 
@@ -86,7 +107,21 @@
         </div>
     </section>
 
-    <!-- PRODUCTS -->
+
+<section class="section flash-sale">
+
+    <h2>🔥 Flash Sale</h2>
+
+    <div class="flash-sale-box">
+        <h3>Wireless Headphones</h3>
+        <p><del>30,000 RWF</del></p>
+        <p>25,000 RWF</p>
+    </div>
+
+</section>
+
+    
+<!-- PRODUCTS -->
     <section class="section products-section" id="shop">
 
         <h2>Our Products</h2>
@@ -102,10 +137,24 @@
 
             <div class="product-card" data-category="electronics">
                 <img src="images/headphones.jpg" alt="Wireless Headphones">
-                <h3>Wireless Headphones</h3>
+               <h3 onclick="viewProduct('Wireless Headphones')" style="cursor:pointer;">
+                Wireless Headphones
+               </h3>
+               <h3>
+               <a href="product.html">
+               Wireless Headphones
+               </a>
+               </h3>
                 <p class="price">25,000 RWF</p>
+                <div class="rating">
+                 ⭐⭐⭐⭐⭐
+                </div>
                 <button onclick="addToCart('Wireless Headphones', 25000)">Add to Cart</button>
+                <button onclick="addToWishlist('Wireless Headphones')">❤️</button>
+            
             </div>
+
+
 <div class="product-card" data-category="fashion">
     <img src="images/sneakers.jpg" alt="Classic Sneakers">
     <h3>Classic Sneakers</h3>
@@ -153,7 +202,15 @@
 </section>
 
 
+<section class="section recently-viewed">
 
+    <h2>Recently Viewed Products</h2>
+
+    <div id="recentlyViewed">
+        No recently viewed products.
+    </div>
+
+</section>
 
   <!-- FOOTER -->
     <footer>

@@ -88,3 +88,14 @@ function searchProducts() {
         }
     });
 }
+
+let wishlist = [];
+
+function addToWishlist(productName) {
+    wishlist.push(productName);
+    alert(productName + " added to wishlist!");
+}
+function viewProduct(productName) {
+    document.getElementById("recentlyViewed").innerHTML =
+        "Last viewed: " + productName;
+}
