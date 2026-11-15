@@ -1,24 +1,43 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>My Profile</h1>
+<div class="profile-container">
+    <h1>My Profile</h1>
 
-<img src="images/profile.png" alt="Profile" width="120">
+    <div class="profile-card">
 
-<h3>Name: Customer</h3>
+        <label for="photoInput">
+            <img id="profilePhoto"
+                 src="images/profile.png"
+                 alt="Profile Photo">
+            <span class="change-photo">Change Photo</span>
+        </label>
 
-<p>Email: customer@example.com</p>
+        <input type="file" id="photoInput" accept="image/*">
 
-<p>Orders: 0</p>
+        <h2 id="displayName">Customer</h2>
+        <p id="displayEmail">customer@example.com</p>
 
-<p>Wishlist Items: 0</p>
+        <div class="profile-details">
+            <p>Orders: <strong>0</strong></p>
+            <p>Wishlist Items: <strong>0</strong></p>
+        </div>
 
-<a href="index.html">Back to Home</a>
+        <button onclick="editProfile()">Edit Profile</button>
+        <a href="index.html">Back to Home</a>
 
+    </div>
+</div>
+
+<script src="profile.js"></script>
 </body>
 </html>
+>
