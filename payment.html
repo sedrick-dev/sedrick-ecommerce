@@ -12,43 +12,30 @@
 <body class="payment-page">
 
     <div class="payment-container">
-
         <h1>Payment Methods</h1>
-
-        <p class="payment-subtitle">
-            Choose your preferred payment method
-        </p>
+        <p class="payment-subtitle">Choose your preferred payment method</p>
 
         <div class="payment-options">
 
-            <div class="payment-card mtn"
-                 onclick="selectPayment('MTN Mobile Money', this)">
-
+            <div class="payment-card mtn" onclick="selectPayment('MTN Mobile Money', this)">
                 <div class="payment-logo">MTN</div>
                 <h3>MTN Mobile Money</h3>
                 <p>Pay securely using MTN MoMo</p>
                 <span class="payment-check">Select Payment →</span>
-
             </div>
 
-            <div class="payment-card airtel"
-                 onclick="selectPayment('Airtel Money', this)">
-
+            <div class="payment-card airtel" onclick="selectPayment('Airtel Money', this)">
                 <div class="payment-logo">airtel</div>
                 <h3>Airtel Money</h3>
                 <p>Pay easily using Airtel Money</p>
                 <span class="payment-check">Select Payment →</span>
-
             </div>
 
-            <div class="payment-card credit"
-                 onclick="selectPayment('Credit Card', this)">
-
+            <div class="payment-card credit" onclick="selectPayment('Credit Card', this)">
                 <div class="payment-logo">💳</div>
                 <h3>Credit Card</h3>
                 <p>Pay using your bank card</p>
                 <span class="payment-check">Select Payment →</span>
-
             </div>
 
         </div>
@@ -59,10 +46,7 @@
 
         <p id="payment-message"></p>
 
-        <a href="index.html" class="payment-back">
-            ← Back Home
-        </a>
-
+        <a href="index.html" class="payment-back">← Back Home</a>
     </div>
 
     <script>
@@ -88,7 +72,7 @@
             }
 
             alert("You selected: " + selectedPayment +
-                "\nPayment gateway is not yet connected.");
+                "\nReal payment integration is not yet connected.");
         }
     </script>
 
