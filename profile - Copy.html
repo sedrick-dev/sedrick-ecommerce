@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="profile-card">
+
+    <h1>My Profile</h1>
+
+    <img id="profilePreview"
+         src="images/profile.png"
+         alt="Profile Photo">
+
+    <br><br>
+
+    <input type="file" id="profileUpload">
+
+    <br><br>
+
+    <h3>Your Name</h3>
+
+    <p>your@email.com</p>
+
+    <p>Orders: 0</p>
+
+    <p>Wishlist Items: 0</p>
+
+    <button>Edit Profile</button>
+
+    <br><br>
+
+    <a href="index.html">Back to Home</a>
+
+</div>
+
+<script>
+document.getElementById('profileUpload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            document.getElementById('profilePreview').src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+
+</body>
+</html>
